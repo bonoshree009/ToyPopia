@@ -1,0 +1,74 @@
+[
+  {
+    "toyId": 1,
+    "toyName": "Galaxy Robo Ranger",
+    "sellerName": "Toys R Us Local",
+    "sellerEmail": "contact@toysruslocal.com",
+    "price": 1899,
+    "rating": 4.8,
+    "availableQuantity": 12,
+    "description": "An action-packed robot toy that sparks imagination and adventure. Perfect for kids who love futuristic battles.",
+    "pictureURL": "https://i.ebayimg.com/00/s/MTYwMFgxMDY5/z/rsAAAOSw5cNYPPxj/%24_57.JPG?set_id=8800005007",
+    "subCategory": "Robots"
+  },
+  {
+    "toyId": 2,
+    "toyName": "Cosmic Speed Car",
+    "sellerName": "Toys R Us Local",
+    "sellerEmail": "contact@toysruslocal.com",
+    "price": 999,
+    "rating": 4.6,
+    "availableQuantity": 20,
+    "description": "A fast and sleek toy car that kids can race around. Encourages motor skills and imaginative play.",
+    "pictureURL": "https://easy-peasy.ai/cdn-cgi/image/quality%3D95%2Cformat%3Dauto%2Cwidth%3D800/https%3A//media.easy-peasy.ai/27feb2bb-aeb4-4a83-9fb6-8f3f2a15885e/d76d2515-8092-4980-b73f-921fa3b09f15.png",
+    "subCategory": "Cars"
+  },
+  {
+    "toyId": 3,
+    "toyName": "Starlight Doll",
+    "sellerName": "Toys R Us Local",
+    "sellerEmail": "contact@toysruslocal.com",
+    "price": 1590,
+    "rating": 4.9,
+    "availableQuantity": 15,
+    "description": "A beautiful doll with a starlight theme, perfect for creative role play and storytelling.",
+    "pictureURL": "https://i5.walmartimages.com/asr/3b0bced5-b88d-491d-9b61-8991c97649f5.50796b633d40489f8df8905acb3c697d.jpeg?odnBg=FFFFFF&odnHeight=768&odnWidth=768",
+    "subCategory": "Dolls"
+  },
+  {
+    "toyId": 4,
+    "toyName": "SpaceCraft Building Blocks",
+    "sellerName": "Toys R Us Local",
+    "sellerEmail": "contact@toysruslocal.com",
+    "price": 2490,
+    "rating": 4.7,
+    "availableQuantity": 30,
+    "description": "Build your own spacecraft with these creative building blocks. Encourages problem-solving and imaginative play.",
+    "pictureURL": "https://img.drz.lazcdn.com/static/bd/p/80fe0029b3380683c311a6a1985ded4f.png_960x960q80.png_.webp",
+    "subCategory": "Building Blocks"
+  },
+  {
+    "toyId": 5,
+    "toyName": "Astro Plush Buddy",
+    "sellerName": "Toys R Us Local",
+    "sellerEmail": "contact@toysruslocal.com",
+    "price": 1200,
+    "rating": 4.5,
+    "availableQuantity": 18,
+    "description": "A soft astronaut plush toy that kids can cuddle with. Perfect for bedtime and imaginative space adventures.",
+    "pictureURL": "https://m.media-amazon.com/images/I/71VdqSf0KZL._AC_UF894%2C1000_QL80_.jpg",
+    "subCategory": "Plush Toys"
+  },
+  {
+    "toyId": 6,
+    "toyName": "Mini Hoverboard Rider",
+    "sellerName": "Toys R Us Local",
+    "sellerEmail": "contact@toysruslocal.com",
+    "price": 2100,
+    "rating": 4.4,
+    "availableQuantity": 10,
+    "description": "A mini hoverboard toy that glides smoothly. Kids can enjoy fun rides and improve coordination skills.",
+    "pictureURL": "https://m.media-amazon.com/images/I/81NWpA1OEfL._AC_UF1000%2C1000_QL80_.jpg",
+    "subCategory": "Vehicles"
+  }
+]

@@ -1,0 +1,53 @@
+[
+  {
+    "id": 1,
+    "toyName": "Galaxy Robo Ranger",
+    "thumbnail": "https://i.ebayimg.com/00/s/MTYwMFgxMDY5/z/rsAAAOSw5cNYPPxj/%24_57.JPG?set_id=8800005007",
+    "rating": 4.8,
+    "availableQuantity": 12,
+    "price": 1899
+  },
+  {
+    "id": 2,
+    "toyName": "Cosmic Speed Car",
+    "thumbnail": "https://easy-peasy.ai/cdn-cgi/image/quality%3D95%2Cformat%3Dauto%2Cwidth%3D800/https%3A//media.easy-peasy.ai/27feb2bb-aeb4-4a83-9fb6-8f3f2a15885e/d76d2515-8092-4980-b73f-921fa3b09f15.png",
+    "rating": 4.6,
+    "availableQuantity": 20,
+    "price": 999
+  },
+  {
+    "id": 3,
+    "toyName": "Starlight Doll",
+    "thumbnail": "https://i5.walmartimages.com/asr/3b0bced5-b88d-491d-9b61-8991c97649f5.50796b633d40489f8df8905acb3c697d.jpeg?odnBg=FFFFFF&odnHeight=768&odnWidth=768",
+    "rating": 4.9,
+    "availableQuantity": 15,
+    "price": 1590
+  },
+  
+  {
+    "id": 4,
+    "toyName": "SpaceCraft Building Blocks",
+    "thumbnail": "https://img.drz.lazcdn.com/static/bd/p/80fe0029b3380683c311a6a1985ded4f.png_960x960q80.png_.webp",
+    "rating": 4.7,
+    "availableQuantity": 30,
+    "price": 2490
+  },
+  {
+    "id": 5,
+    "toyName": "Astro Plush Buddy",
+    "thumbnail": "https://m.media-amazon.com/images/I/71VdqSf0KZL._AC_UF894%2C1000_QL80_.jpg",
+    "rating": 4.5,
+    "availableQuantity": 18,
+    "price": 1200
+  },
+  {
+    "id": 6,
+    "toyName": "Mini Hoverboard Rider",
+    "thumbnail": "https://m.media-amazon.com/images/I/81NWpA1OEfL._AC_UF1000%2C1000_QL80_.jpg",
+    "rating": 4.4,
+    "availableQuantity": 10,
+    "price": 2100
+  }
+
+
+]

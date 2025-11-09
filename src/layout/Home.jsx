@@ -4,14 +4,18 @@ import Slider from '../Components/Slider';
 import { Outlet } from 'react-router';
 import PopularToy from '../Components/PopularToy';
 import WhyChooseUs from '../Components/WhyChosseUs';
+import Testimonials from '../Components/Testimonials';
+import Footer from '../Components/Footer';
 
 const Home = () => {
     return (
         <div>
             <Navbar></Navbar>
-            {/* <Slider></Slider> */}
+             <Slider></Slider> 
             <PopularToy></PopularToy>
             <WhyChooseUs></WhyChooseUs>
+            <Testimonials></Testimonials>
+            <Footer></Footer>
             <Outlet></Outlet>
 
         </div>

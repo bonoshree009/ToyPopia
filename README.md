@@ -1,16 +1,29 @@
-# React + Vite
+# About My Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Website Name
+**ToyPopia**
 
-Currently, two official plugins are available:
+## Purpose
+This website is designed to help users explore and buy toys online, as well as provide information and support for customers. It also features legal advisory and service information for general people.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Frontend Technologies
+- **CSS3 / Tailwind CSS**: Styling and layout
+- **JavaScript**: Dynamic interactions and functionality
+- **React.js**: Component-based UI for faster development and reusable components
 
-## React Compiler
+## Backend Technologies 
+- **Authentication**: User login and registration (Firebase Auth or JWT)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Additional Tools
+- **React Router**: Page navigation
+- **React Icons**: Icons for UI elements
+- **Toastify**: Notifications
+- **Suspense / Loader**: Data loading handling
+- **Vite**: React project bundler
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Why Choose This Website?
+- Easy and intuitive UI
+- Fast and responsive
+- Secure and reliable
+- Detailed product information
+- Customer support and contact options

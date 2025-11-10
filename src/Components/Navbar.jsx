@@ -1,7 +1,20 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { NavLink } from 'react-router';
+import { AuthContext } from '../Provider/AuthProvider';
+import userlogo from '../assets/user.png'
+import { ToastContainer, toast } from 'react-toastify';
 
 const Navbar = () => {
+    const {user,logOut} =useContext(AuthContext)
+
+    const handlelogOut=()=>
+      {
+    console.log('user trying to logout')
+    logOut().then(()=>{
+        toast("Logged out. Come back soon!");
+    }).catch(err => console.log(err))
+
+    }
     return (
    <div className="navbar bg-base-100 shadow-sm p-3 md:px-20">
   <div className="navbar-start">
@@ -26,7 +39,14 @@ const Navbar = () => {
       <li><a>My Profile</a></li>
     </ul>
   </div>
-    <a className="btn bg-pink-300 text-white text-xl">Login</a>
+  
+    <div className='login-btn flex gap-5'>
+      
+      <img src={`${user? user.photoURL : userlogo }`} alt=""  className='w-12 rounded-full bg-gray-200 p-1'/>
+    { user? ( (<button className='btn bg-blue-600 text-white text-xl' onClick={handlelogOut}>LogOut</button>)):
+      (<button className='btn bg-pink-300 text-white text-xl'><NavLink to='/auth/login'>Login </NavLink></button>)}
+ <ToastContainer />
+     </div>
   </div>
 </div>
     );

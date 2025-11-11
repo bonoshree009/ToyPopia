@@ -1,19 +1,19 @@
-import React, { use } from 'react';
+import React, { useContext } from 'react';
 import { AuthContext } from './AuthProvider';
 import { Navigate, useLocation } from 'react-router';
 import Spinner from '../Components/Spinner'
 
 const PrivateRroute = ({children}) => {
-    const {user,loding} =use(AuthContext)
+    const {user,loading} =useContext(AuthContext)
     const location =useLocation()
-    if(loding){
+    if(loading){
         return <Spinner></Spinner>
     }
     if(user && user?.email){
         return children
     }
     else{
-        return <Navigate state={location.path} to="/auth/login"></Navigate>
+        return <Navigate state={location.pathname} to="/auth/login"></Navigate>
     }
 };
 

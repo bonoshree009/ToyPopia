@@ -3,10 +3,11 @@ import { NavLink } from 'react-router';
 import { AuthContext } from '../Provider/AuthProvider';
 import userlogo from '../assets/user.png'
 import { ToastContainer, toast } from 'react-toastify';
+import Spinner from './Spinner';
 
 const Navbar = () => {
     const {user,logOut} =useContext(AuthContext)
-
+          
     const handlelogOut=()=>
       {
     console.log('user trying to logout')
@@ -15,7 +16,12 @@ const Navbar = () => {
     }).catch(err => console.log(err))
 
     }
+
+    
+
+
     return (
+      
    <div className="navbar bg-base-100 shadow-sm p-3 md:px-20">
   <div className="navbar-start">
     <div className="dropdown">
@@ -40,7 +46,7 @@ const Navbar = () => {
     </ul>
   </div>
   
-    <div className='login-btn flex gap-5'>
+    <div className='login-btn flex gap-5 items-center'>
       
       <img src={`${user? user.photoURL : userlogo }`} alt=""  className='w-12 rounded-full bg-gray-200 p-1'/>
     { user? ( (<button className='btn bg-blue-600 text-white text-xl' onClick={handlelogOut}>LogOut</button>)):

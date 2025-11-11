@@ -21,9 +21,3 @@ This website is designed to help users explore and buy toys online, as well as p
 - **Suspense / Loader**: Data loading handling
 - **Vite**: React project bundler
 
-## Why Choose This Website?
-- Easy and intuitive UI
-- Fast and responsive
-- Secure and reliable
-- Detailed product information
-- Customer support and contact options

@@ -8,6 +8,7 @@ import Login from '../Pages/Login'
 import Register from '../Pages/Register'
 import AuthLayout from '../layout/AuthLayout';
 import PrivateRroute from '../Provider/PrivateRoute';
+import ErrorPage from '../Pages/ErrorPage';
 
 
 
@@ -15,6 +16,7 @@ import PrivateRroute from '../Provider/PrivateRoute';
 export const router = createBrowserRouter([
   {
     path: "/",
+    errorElement: <ErrorPage></ErrorPage>,
     element: (
       <Suspense fallback={<Spinner></Spinner>}>
         <Home />
@@ -53,5 +55,12 @@ export const router = createBrowserRouter([
         element:<Register></Register>
       }
     ]
+  },
+  {
+    
+    path: "*",
+    element: <ErrorPage />
+  
   }
+  
 ]);

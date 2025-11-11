@@ -1,10 +1,11 @@
-import React , {  useContext } from 'react';
+import React , {  useContext} from 'react';
 import { Link , Navigate, useNavigate} from 'react-router';
 import { AuthContext } from '../Provider/AuthProvider';
 import { ToastContainer, toast } from 'react-toastify';
 
 const Register = () => {
     const {createuser,updateuser,setuser} =useContext(AuthContext)
+    
     const navigate = useNavigate()
     const handleregister=(e)=>{
           e.preventDefault(); 
@@ -12,15 +13,21 @@ const Register = () => {
          const photo = e.target.photo.value;
            const email = e.target.email.value;
              const pass = e.target.pass.value;
-        console.log(name,photo,email,pass);
+       // console.log(name,photo,email,pass);
+
+
+          const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
+         if(!passwordPattern.test(pass)){
+    toast.error('Your password must be at least 6 characters with one uppercase and one lowercase letter');
+            return
+           }
         createuser(email,pass).then(res =>{
             const user = res.user
-               toast("Successfully Registed!");
-
            updateuser({displayName:name, photoURL: photo})
        .then(()=>{
       setuser({...user,displayName:name,photoURL: photo})
        navigate("/")
+       toast.success("Successfully Registed!");
        }).catch((error) =>{
         console.log(error)
         setuser(user)
@@ -51,6 +58,8 @@ const Register = () => {
         
           <button  type="submit" className="btn bg-blue-400 text-white mt-4">Register</button>
           <h1>Already Have An Account ? <Link to='/auth/Login' className=' text-pink-600'>Login</Link></h1>
+
+         
              <ToastContainer />
         </fieldset>
       </div>

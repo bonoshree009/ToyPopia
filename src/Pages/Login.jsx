@@ -14,12 +14,11 @@ const login = () => {
         
                const email = e.target.email.value;
                  const pass = e.target.pass.value;
-            console.log(email,pass);
+           // console.log(email,pass);
             signIn(email,pass).then(res => {
               console.log(res.user)
                toast("Welcome!");
                navigate(`${location.state?location.state : "/"}`)
-              
 
             }).catch(err => {
               console.log(err)

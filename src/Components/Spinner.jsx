@@ -2,9 +2,9 @@ import React from 'react';
 
 const Spinner = () => {
     return (
-        <div>
-            <span className="loading loading-spinner text-error"></span>
-        </div>
+        <div className="flex items-center justify-center h-screen">
+      <span className="loading loading-spinner  text-error  scale-[5]"></span>
+    </div>
     );
 };
 

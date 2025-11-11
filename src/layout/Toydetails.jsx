@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '../Components/Navbar';
 import { useLoaderData, useParams } from 'react-router';
 import { ToastContainer, toast } from 'react-toastify';
+import Footer from '../Components/Footer';
 
 const Toydetails = () => {
        const Alltoydetails = useLoaderData()
@@ -55,7 +56,7 @@ const Toydetails = () => {
       </form>
       </div>
     </div>    
-
+     <Footer></Footer>
            
         </div>
     );

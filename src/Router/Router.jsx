@@ -7,8 +7,9 @@ import Spinner from '../Components/Spinner';
 import Login from '../Pages/Login'
 import Register from '../Pages/Register'
 import AuthLayout from '../layout/AuthLayout';
-import PrivateRroute from '../Provider/PrivateRoute';
+import PrivateRoute from '../Provider/PrivateRoute'
 import ErrorPage from '../Pages/ErrorPage';
+import MyProfile from '../Pages/MyProfile';
 
 
 
@@ -33,7 +34,7 @@ export const router = createBrowserRouter([
     path: "/toydetalis/:id",
     element: (
       <Suspense fallback={<p>loading</p>}>
-      <PrivateRroute>  <Toydetails /></PrivateRroute>
+      <PrivateRoute>  <Toydetails /></PrivateRoute>
       </Suspense>
     ),
     loader: async () => {
@@ -47,15 +48,26 @@ export const router = createBrowserRouter([
     element:<AuthLayout></AuthLayout>,
     children:[
       {
-    path:'/auth/login',
-    element: <Login></Login>
+         path:'/auth/login',
+         element: <Login></Login>
       },
       {
         path:'/auth/register',
         element:<Register></Register>
-      }
+      },
+       {
+       path: "/auth/profile",
+       element: (
+      <PrivateRoute>
+        <MyProfile></MyProfile>
+      </PrivateRoute>
+  )
+},
+      
     ]
+
   },
+ 
   {
     
     path: "*",

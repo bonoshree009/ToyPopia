@@ -10,6 +10,7 @@ import Footer from '../Components/Footer';
 const Home = () => {
     return (
         <div>
+            <title>Toypopia-Home</title>
             <Navbar></Navbar>
              <Slider></Slider> 
             <PopularToy></PopularToy>

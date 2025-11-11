@@ -1,9 +1,11 @@
-import React , {  useContext} from 'react';
+import React , {  useContext, useState} from 'react';
 import { Link , Navigate, useNavigate} from 'react-router';
 import { AuthContext } from '../Provider/AuthProvider';
 import { ToastContainer, toast } from 'react-toastify';
+import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai'; // Using react-icons
 
 const Register = () => {
+    const [showPassword, setShowPassword] = useState(false);
     const {createuser,updateuser,setuser} =useContext(AuthContext)
     
     const navigate = useNavigate()
@@ -40,6 +42,7 @@ const Register = () => {
     return (
          <div>
              <div className="flex justify-center items-center ">
+              <title>Register</title>
   
     
     <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
@@ -54,7 +57,11 @@ const Register = () => {
           <label className="label">Email</label>
           <input type="email" className="input" placeholder="Email" name='email' required/>
           <label className="label">Password</label>
-          <input type="password" className="input" placeholder="Password" name='pass' required/>
+            <div className="relative">
+               <input  type={showPassword ? "text" : "password"}  className="input pr-10" placeholder="Password" name='pass'  required/>
+                 <button  type="button"  className="absolute right-6 top-1/2 transform -translate-y-1/2 text-pink-600"onClick={() => setShowPassword(!showPassword)} >
+                       {showPassword ? <AiFillEyeInvisible size={20}/> : <AiFillEye size={20}/>} </button>
+                            </div>
         
           <button  type="submit" className="btn bg-blue-400 text-white mt-4">Register</button>
           <h1>Already Have An Account ? <Link to='/auth/Login' className=' text-pink-600'>Login</Link></h1>

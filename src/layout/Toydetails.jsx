@@ -18,6 +18,7 @@ const Toydetails = () => {
      
     return (
         <div>
+          <title>{details.toyName}</title>
             <Navbar></Navbar>
               
         <div className="flex flex-col md:flex-row bg-pink-100 shadow-lg rounded-lg overflow-hidden my-10  mx-5 md:mx-20">

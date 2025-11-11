@@ -3,7 +3,7 @@ import { AuthContext } from './AuthProvider';
 import { Navigate, useLocation } from 'react-router';
 import Spinner from '../Components/Spinner'
 
-const PrivateRroute = ({children}) => {
+const PrivateRoute = ({children}) => {
     const {user,loading} =useContext(AuthContext)
     const location =useLocation()
     if(loading){
@@ -17,4 +17,4 @@ const PrivateRroute = ({children}) => {
     }
 };
 
-export default PrivateRroute;
+export default PrivateRoute;

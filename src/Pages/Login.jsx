@@ -1,4 +1,4 @@
-import React, {  useContext, useState } from 'react';
+import React, {  useContext, useRef, useState } from 'react';
 import { Link, useNavigate } from 'react-router';
 import { AuthContext } from '../Provider/AuthProvider';
 import { ToastContainer, toast } from 'react-toastify';
@@ -6,8 +6,9 @@ import { ToastContainer, toast } from 'react-toastify';
 const login = () => {
 
    const [error,seterror] =useState((''))
-   const {signIn} = useContext(AuthContext)
+   const {signIn,forgetpass} = useContext(AuthContext)
    const navigate = useNavigate()
+   const emailref = useRef()
 
      const handleLogin=(e)=>{
         e.preventDefault(); 
@@ -15,8 +16,8 @@ const login = () => {
                const email = e.target.email.value;
                  const pass = e.target.pass.value;
            // console.log(email,pass);
-            signIn(email,pass).then(res => {
-              console.log(res.user)
+            signIn(email,pass).then(() => {
+             
                toast("Welcome!");
                navigate(`${location.state?location.state : "/"}`)
 
@@ -25,7 +26,20 @@ const login = () => {
               seterror('incorrect Email or pass')
                e.target.reset()
             })
+     }
+     const handleforgetpass=()=>{
+      console.log("clicked")
 
+      const email=emailref.current.value
+       if (!email) {
+    toast.error("Please enter your Email first!");
+    return;
+  }
+      forgetpass(email).then( ()=>{
+        
+         toast("please check your Email!");}
+      ).catch(()=>{ toast.error("Failed to send reset email!");})
+        
 
      }
     return (
@@ -39,10 +53,10 @@ const login = () => {
        < div className="card-body">
         <fieldset className="fieldset">
           <label className="label">Email</label>
-          <input type="email" className="input" placeholder="Email"name='email' required />
+          <input type="email" className="input" placeholder="Email"name='email' ref={emailref} required />
           <label className="label">Password</label>
           <input type="password" className="input" placeholder="Password" name='pass' required/>
-          <div><a className="link link-hover">Forgot password?</a></div>
+          <div ><a className="link link-hover" onClick={handleforgetpass}>Forgot password?</a></div>
           <button type='submit' className="btn bg-pink-300 text-white font-bold mt-4">Login</button>
           {
             error && <p className='text-red-600'>{error}</p>

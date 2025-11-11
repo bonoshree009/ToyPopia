@@ -6,7 +6,7 @@ import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai'; // Using react-i
 
 const Register = () => {
     const [showPassword, setShowPassword] = useState(false);
-    const {createuser,updateuser,setuser} =useContext(AuthContext)
+    const {createuser,updateuser,setuser,google} =useContext(AuthContext)
     
     const navigate = useNavigate()
     const handleregister=(e)=>{
@@ -37,7 +37,14 @@ const Register = () => {
        
       }).catch(err => console.log(err))
 
-
+    }
+    const googlehandle=()=>{
+       google().then(()=>{
+        toast.success("Successfully Registed!");
+         navigate("/");
+       }).catch((error) =>{
+        console.log(error)
+       })
     }
     return (
          <div>
@@ -65,12 +72,12 @@ const Register = () => {
         
           <button  type="submit" className="btn bg-blue-400 text-white mt-4">Register</button>
           <h1>Already Have An Account ? <Link to='/auth/Login' className=' text-pink-600'>Login</Link></h1>
-
-         
              <ToastContainer />
         </fieldset>
       </div>
       </form>
+        <button className="btn w-full bg-blue-50 hover:bg-blue-100 text-blue-700 flex items-center gap-2 border-blue-300 mb-4" onClick={googlehandle}>
+         <img  src="https://www.svgrepo.com/show/355037/google.svg"  className="w-5 h-5"  /> Sign in with Google</button>
     </div>
   </div>
         </div>

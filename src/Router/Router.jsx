@@ -10,6 +10,7 @@ import AuthLayout from '../layout/AuthLayout';
 import PrivateRoute from '../Provider/PrivateRoute'
 import ErrorPage from '../Pages/ErrorPage';
 import MyProfile from '../Pages/MyProfile';
+import Orders from '../Pages/Orders';
 
 
 
@@ -63,6 +64,10 @@ export const router = createBrowserRouter([
       </PrivateRoute>
   )
 },
+{
+  path:"/auth/orders",
+  element:<PrivateRoute><Orders></Orders></PrivateRoute>
+}
       
     ]
 

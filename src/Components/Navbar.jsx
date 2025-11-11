@@ -39,9 +39,12 @@ const Navbar = () => {
      <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1 flex items-center">
        <li><NavLink to="/">Home</NavLink></li>
+       <li>
      
-       {user ? (<NavLink to="/auth/profile">My Profile</NavLink> ) : (<NavLink to="/auth/login" > My Profile</NavLink>
-  )}
+       {user ? (<NavLink to="/auth/profile">My Profile</NavLink> ) : (<NavLink to="/auth/login" > My Profile</NavLink>) }</li>
+     <li>
+       {user && (<NavLink to="/auth/orders">Orders</NavLink>)}</li>
+
     </ul>
   </div>
   

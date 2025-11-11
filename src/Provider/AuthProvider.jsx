@@ -52,39 +52,4 @@ return ()=> unsubscribe()
 };
 
 export default AuthProvider;
-    {/* const createuser = (email,pass)=>{
-        setloding(true)
-        return createUserWithEmailAndPassword(auth,email,pass)
-    }
-    const logOut =()=>{
-        return signOut(auth)
-    }
-
-    
-    const signIn =(email,pass)=>{
-        setloding(true)
-    return signInWithEmailAndPassword(auth,email,pass)
-    }
-
-     const updateuser = (updateddata) =>{
-        return updateProfile(auth.currentUser,updateddata)
-     }
-    useEffect(()=>{
-    const unsubscribe = onAuthStateChanged(auth,(currentuser)=>{
-    setuser(currentuser)
-    setloding(false)
-});
-return ()=> unsubscribe()
-
-    },[])
-
-
-
-    const authdata ={
-        user,
-        setuser,
-        createuser,logOut,signIn,loding,setloding,updateuser
-    }
   
-    return <AuthContext value={authdata}>{children}</AuthContext>
-}; */}

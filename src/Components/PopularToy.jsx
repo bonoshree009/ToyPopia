@@ -1,11 +1,16 @@
-import React   from 'react';
+import React, { useEffect }   from 'react';
 import { useLoaderData } from 'react-router';
 import ToyCard from './ToyCard';
+import Aos from 'aos';
+import 'aos/dist/aos.css'; 
 
 
 const PopularToy = () => {
     
     const Alltoy = useLoaderData()
+     useEffect(() => {
+    Aos.init({ duration: 1000, once: true });
+  }, []);
     
     
    // console.log(Alltoy)

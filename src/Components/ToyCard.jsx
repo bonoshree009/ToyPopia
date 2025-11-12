@@ -5,12 +5,8 @@ const ToyCard = ({toy}) => {
     
 
     return (
-       <div className="p-4 rounded-xl shadow-lg  bg-pink-100">
-      <img
-        src={toy.thumbnail}
-        className="w-full h-56 object-cover rounded-lg"
-        alt={toy.toyName}
-      />
+      <div className="p-4 rounded-xl shadow-lg  bg-pink-100" data-aos="fade-up">
+      <img src={toy.thumbnail} className="w-full h-56 object-cover rounded-lg" alt={toy.toyName} />
 
       <h3 className="text-lg font-semibold mt-3">{toy.toyName}</h3>
 

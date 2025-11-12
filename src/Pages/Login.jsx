@@ -6,7 +6,7 @@ import { ToastContainer, toast } from 'react-toastify';
 const login = () => {
 
    const [error,seterror] =useState((''))
-   const {signIn,forgetpass} = useContext(AuthContext)
+   const {signIn,forgetpass, google} = useContext(AuthContext)
    const navigate = useNavigate()
    const emailref = useRef()
 
@@ -42,6 +42,14 @@ const login = () => {
         
 
      }
+      const googlehandle=()=>{
+            google().then(()=>{
+             toast.success("Successfully Registed!");
+              navigate("/");
+            }).catch((error) =>{
+             console.log(error)
+            })
+         }
     return (
              <div className="flex justify-center items-center ">
               <title>Login</title>
@@ -66,6 +74,8 @@ const login = () => {
              <ToastContainer />
       </div>
       </form>
+      <button className="btn w-full bg-blue-50 hover:bg-blue-100 text-blue-700 flex items-center gap-2 border-blue-300 mb-4" onClick={googlehandle}>
+               <img  src="https://www.svgrepo.com/show/355037/google.svg"  className="w-5 h-5"  /> Sign in with Google</button>
     </div>
   </div>
     );
